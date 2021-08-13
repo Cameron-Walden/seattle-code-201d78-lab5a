@@ -60,8 +60,7 @@ let sum2 = sum(sum1[0], c);
 let mult1 = multiply(a, b);
 let mult2 = multiply(mult1[0], c);
 let string = a  + ' and ' + b + ' and ' + c + ' sum to ' + sum2[0] + '.';
-let string2 = 'the product of ' + a + ' and ' + b + ' and ' + c + ' is ' + mult2[0] + '.';
-console.log(string, string2)
+let string2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + mult2[0] + '.';
 return [sum2[0], mult2[0], string, string2]; 
 }
 
@@ -109,11 +108,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+let mult1 = multiply(multArr[0], multArr[1]);
+let mult2 = multiply(mult1[0], multArr[2]);
+let string = 'The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + mult2[0] + '.'
+return [mult2[0], string];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
