@@ -53,12 +53,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-// you get back an array from sum!!!
+//you get back an array from sum!!!
 // make sure your get the correct index number to get the number from sum
 let sum1 = sum(a, b);
 let sum2 = sum(sum1[0], c);
-let mult = multiply(a, b);
-let mult2 = multiply(mult[0], c);
+let mult1 = multiply(a, b);
+let mult2 = multiply(mult1[0], c);
 let string = a  + ' and ' + b + ' and ' + c + ' sum to ' + sum2[0] + '.';
 let string2 = 'the product of ' + a + ' and ' + b + ' and ' + c + ' is ' + mult2[0] + '.';
 console.log(string, string2)
@@ -84,12 +84,16 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  let sum1 = sum(testArray[0], testArray[1]);
+  let sum2 = sum(sum1[0], testArray[2]);
+  let string = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + sum2[0] + ' is their sum.'
+  console.log(string)
+  return [sum2[0], string];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
